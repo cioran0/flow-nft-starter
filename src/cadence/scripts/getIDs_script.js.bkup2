@@ -1,0 +1,11 @@
+export const getIDs = 
+`
+import BottomShot from 0xa019c66fdef2931c
+
+pub fun main(acct: Address): [UInt64] {
+  let publicRef = getAccount(acct).getCapability(/public/BottomShot3)
+    .borrow<&BottomShot.Collection{BottomShot.CollectionPublic}>()
+    ?? panic ("Oof ouch owie this account doesn't have a collection there")
+  return publicRef.getIDs()
+}
+`

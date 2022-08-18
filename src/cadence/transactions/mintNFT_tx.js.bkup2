@@ -1,0 +1,33 @@
+//export const mintNFT = 
+
+import BottomShot from 0xa019c66fdef2931c
+import NonFungibleToken  from 0xa019c66fdef2931c
+
+transaction()
+    let minter: &buildSpacemyPicsfinalproj.NFTMinter
+
+    prepare(signer: AuthAccount) {
+        
+        self.minter = signer.borrow<&buildSpacemyPicsfinalproj.NFTMinter>(from: buildSpacemyPicsfinalproj.MinterStoragePath)
+        ?? panic("Could not borrow a reference to the NFT Minter")
+    }
+
+  execute {
+
+    let receiver = getAccount(0x29f4ad0f552505bb)
+        .getCapability(buildSpacemyPicsfinalproj.CollectionPublicPath)
+        .borrow<&{NonFungibleToken.Collection}>()
+        ?? panic("Could not get receiver reference to the NFT Collection")
+        
+        //changed from self.minter.mintNFT
+  self.minter.myMintNFT(
+    recipient: receiver,
+    name: "",        //name, (took out to get rid of error)
+    description: "", //description, (took this out)
+    thumbnail: "",   //thumbnail, (took this out)
+  )      
+
+  log("Minted an NFT and stored it into the collection")
+  }  
+
+}

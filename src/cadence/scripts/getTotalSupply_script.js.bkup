@@ -1,0 +1,12 @@
+export const getTotalSupply = 
+`
+import BottomShot from 0xa019c66fdef2931c
+
+pub fun main(): UInt64 {
+
+    let supply = BottomShot.totalSupply
+
+    return supply
+
+}
+`
