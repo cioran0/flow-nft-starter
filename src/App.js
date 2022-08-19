@@ -114,9 +114,9 @@ function App() {
         })
         // If the source is an IPFS link, remove the "ipfs://" prefix
         if (result["thumbnail"].startsWith("ipfs://")) { //they all do
-          _imageSrc.push(result["thumbnail"].substring(7))
+          _imageSrc.push(result["thumbnail"].substring(67))
           // Add a gateway prefix
-          _imageSrc[i] = "https://" + "11teen" + _imageSrc[i]
+          _imageSrc[i] = "https://" + "bafybeifj2n7kcoyb7xbbcht2jtgineyuvitejvz5opund4dsdl4qieo5me" + ".ipfs.nftstorage.link/" + i + ".png"
         }
         else {
           _imageSrc.push(result["thumbnail"])
@@ -152,7 +152,7 @@ function App() {
           arg(user.addr, types.Address), //address to which NFT should be minted
           arg("Shape # "+_id.toString(), types.String),
           arg("Shapes", types.String),
-          arg("ipfs://bafybeifj2n7kcoyb7xbbcht2jtgineyuvitejvz5opund4dsdl4qieo5me/"+_id + ".png", types.String), //changed
+          arg("ipfs://bafybeifj2n7kcoyb7xbbcht2jtgineyuvitejvz5opund4dsdl4qieo5me/"+_id + "n.png", types.String), //changed
         ],
         proposer: fcl.currentUser,
         payer: fcl.currentUser,
