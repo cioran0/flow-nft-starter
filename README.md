@@ -12,5 +12,4 @@ Have some questions make sure you head over to your [buildspace Dashboard](https
 
 ### Completed FLOW Project from Buildspace
 
-Project (morbius themed) DEPLOYED LIVE (with NFT/shapes display) at:
-[Deployed Live on Vercel](https://flow-nft-starter-ten.vercel.app/)
+Project (morbius themed) DEPLOYED LIVE (with NFT/shapes display) [on Vercel](https://flow-nft-starter-ten.vercel.app/)
